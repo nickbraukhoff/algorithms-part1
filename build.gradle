@@ -1,0 +1,13 @@
+allprojects {
+    apply from: "$rootDir/gradle/repositories.gradle"
+    apply from: "$rootDir/gradle/dependencies.gradle"
+    apply plugin: 'idea'
+}
+
+subprojects {
+
+}
+
+task createWrapper(type: Wrapper) {
+    gradleVersion = '2.1'
+}
